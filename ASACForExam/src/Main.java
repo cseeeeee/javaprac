@@ -7,6 +7,10 @@ public class Main {
         System.out.println("도형의 크기를 입력해주세요.");
 
         int size = scan.nextInt();
+
+        if (size%2==0){
+            size++;
+        }
         for (int i = 1; i <= size; i += 2) {
             String star = "";
             for (int j = size - 1; j > i; j -= 2) {
@@ -30,7 +34,7 @@ public class Main {
                 star+="*";
             }
             System.out.println(star);
-            scan.close();
         }
+        scan.close();
     }
 }
